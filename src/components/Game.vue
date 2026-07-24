@@ -221,7 +221,6 @@ function getCorrectNess(guess, correctValue) {
     width: 100%;
     container-type: inline-size;
     container-name: game-grid;
-    padding-bottom: var(--spacing-06);
 }
 .header-grid {
     width: 100%;
@@ -253,6 +252,7 @@ function getCorrectNess(guess, correctValue) {
     justify-content: center;
     gap:var(--spacing-03);
     flex-wrap: wrap;
+    padding-block: var(--spacing-05);
 }
 .input-field {
     border: solid var(--green) 2px;
