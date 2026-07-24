@@ -69,12 +69,14 @@
         <p>Check back tomorrow to guess a new animal.</p>
     </div>
     <form class="input-form" @submit.prevent="checkAnswer" v-if="!gameSucceeded">
+        <div class="input-form-body">
         <div class="input-container">
             <input type="text" v-model="guessInput" @input="input" placeholder="Enter an animal" class="input-field">
-            <button class="submit-button">Submit</button>
+            <div class="input-suggestions-container" v-if="suggestions.length > 0">
+                <button v-for="suggestion in suggestions" :key="suggestion" @click="selectSuggestion(suggestion)" class="suggestion"><img :src="getImageUrl(suggestion)" :alt="`${ suggestion }`">{{ suggestion }}</button>
+            </div>
         </div>
-        <div class="input-suggestions-container" v-if="suggestions.length > 0">
-            <button v-for="suggestion in suggestions" :key="suggestion" @click="selectSuggestion(suggestion)" class="suggestion"><img :src="getImageUrl(suggestion)" :alt="`${ suggestion }`">{{ suggestion }}</button>
+            <button class="submit-button">Submit</button>
         </div>
         <div class="error-message">{{errorMessage}}</div>
     </form>
@@ -248,19 +250,29 @@ function getCorrectNess(guess, correctValue) {
     margin: auto;
 }
 .input-container {
+    width: 100%;
     display: flex;
     justify-content: center;
     gap:var(--spacing-03);
     flex-wrap: wrap;
+}
+.input-form-body {
+    display: flex;
+    align-items: start;
+    gap: var(--spacing-06);
     padding-block: var(--spacing-05);
+
 }
 .input-field {
+    width: 100%;
     border: solid var(--green) 2px;
     border-radius: var(--radii-m);
     padding: var(--spacing-04) var(--spacing-05);
     min-width: 50%;
+     font-size: var(--type-05);
 }
 .submit-button {
+
     padding: var(--spacing-04) var(--spacing-05);
     background-color: var(--green);
     border: 4px solid var(--dark-green);
@@ -298,7 +310,7 @@ function getCorrectNess(guess, correctValue) {
     padding: var(--spacing-04) var(--spacing-05);
 }
 table {
-    border-collapse: separate;
+    border-collapse: collapse;
     border-spacing: var(--spacing-03) var(--spacing-03);
 }
 table tbody tr:first-child td:first-child{
