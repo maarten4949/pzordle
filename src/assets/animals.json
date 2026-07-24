@@ -1,0 +1,363 @@
+[
+  {
+    "name": "Aardvark",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+
+  {
+    "name": "African Leopard",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland", "Tropical"],
+    "continent": ["Africa"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "African Penguin",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland", "Open Sea"],
+    "continent": ["Africa"],
+    "conservation": ["Critically Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "African Savannah Elephant",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Desert", "Grassland", "Wetlands"],
+    "continent": ["Africa"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "African Tigerfish",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Lakes and Rivers"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Axolotl",
+    "habitat": ["Exhibit"],
+    "biome": ["Desert", "Wetlands"],
+    "continent": ["North America"],
+    "conservation": ["Critically Endangered"],
+    "contentPack": "Deluxe"
+  },
+  {
+    "name": "Blacktip Reef Shark",
+    "habitat": ["Aquarium"],
+    "biome": ["Estaurine", "Mangrove", "Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Blue and Gold Fusilier",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Deluxe"
+  },
+  {
+    "name": "Blue Wildebeest",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Blunthead Cichlid",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Lakes and Rivers"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Boa Constrictor",
+    "habitat": ["Exhibit"],
+    "biome": ["Grassland", "Tropical"],
+    "continent": ["North America", "South America"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Brown Trout",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Lakes and Rivers"],
+    "continent": ["Europe"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Common BlueTongue",
+    "habitat": ["Exhibit"],
+    "biome": ["Grassland", "Temperate", "Tropical"],
+    "continent": ["Oceania"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Common Hippopotamus",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland", "Lakes and Rivers", "Wetlands"],
+    "continent": ["Africa"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Danube Crested Newt",
+    "habitat": ["Exhibit"],
+    "biome": ["Temperate","Wetlands"],
+    "continent": ["Europe"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Eurasian Brown Bear",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Taiga", "Temperate", "Tundra"],
+    "continent": ["Asia","Europe"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "European Bison",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Taiga", "Temperate"],
+    "continent": ["Europe"],
+    "conservation": ["Near Threatened"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "European Peacock",
+    "habitat": ["Exhibit"],
+    "biome": ["Grassland", "Temperate"],
+    "continent": ["Asia", "Europe"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Fire Salamander",
+    "habitat": ["Exhibit"],
+    "biome": ["Temperate"],
+    "continent": ["Europe"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Gemsbok",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Desert", "Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Gharial",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Lakes and Rivers", "Tropical", "Wetlands"],
+    "continent": ["Asia"],
+    "conservation": ["Critically Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Giant Malaysian Leaf Insect",
+    "habitat": ["Exhibit"],
+    "biome": ["Tropical"],
+    "continent": ["Asia"],
+    "conservation": ["???"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Gila Monster",
+    "habitat": ["Exhibit"],
+    "biome": ["Desert"],
+    "continent": ["North America"],
+    "conservation": ["Near Threatened"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Golden Eagle",
+    "habitat": ["Habitat-Flying"],
+    "biome": ["Desert", "Grassland", "Taiga", "Temperate", "Tundra"],
+    "continent": ["Africa", "Asia", "Europe", "North America"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Deluxe"
+  },
+  {
+    "name": "Golden Lion Tamarin",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Tropical"],
+    "continent": ["South America"],
+    "conservation": ["Endangered"],
+    "contentPack": "Deluxe"
+  },
+  {
+    "name": "Golden Poison Frog",
+    "habitat": ["Exhibit"],
+    "biome": ["Tropical"],
+    "continent": ["South America"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Goodfellow's Tree-Kangaroo",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Tropical"],
+    "continent": ["Oceania"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Great Hammerhead",
+    "habitat": ["Aquarium"],
+    "biome": ["Open Sea", "Reef"],
+    "continent": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Critically Endangered"],
+    "contentPack": "Deluxe"
+  },
+  {
+    "name": "Hawksbill Turtle",
+    "habitat": ["Aquarium"],
+    "biome": ["Estaurine", "Mangrove", "Open Sea", "Reef"],
+    "continent": ["Africa", "Asia", "Atlantic Ocean", "Europe", "Indian Ocean", "North America", "Oceania", "Pacific Ocean", "South America"],
+    "conservation": ["Critically Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Humphead Wrasse",
+    "habitat": ["Aquarium"],
+    "biome": ["Open Sea", "Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Lion",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Longfin Batfish",
+    "habitat": ["Aquarium"],
+    "biome": ["Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Deluxe"
+  },
+  {
+    "name": "Masai Giraffe",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Ocean Sunfish",
+    "habitat": ["Aquarium"],
+    "biome": ["Open Sea"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Plains Zebra",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Near Threatened"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Red Deer",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Temperate"],
+    "continent": ["Africa","Asia","Europe"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Red Lionfish",
+    "habitat": ["Aquarium"],
+    "biome": ["Estaurine", "Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Red Panda",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Taiga", "Temperate"],
+    "continent": ["Asia"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Saltwater Crocodile",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Estaurine", "Mangrove", "Tropical"],
+    "continent": ["Asia", "Oceania"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Schooling Bannerfish",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Secretarybird",
+    "habitat": ["Habitat-Flying"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Spotted Eagle Ray",
+    "habitat": ["Aquarium"],
+    "biome": ["Estaurine", "Open Sea", "Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Springbok",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Desert", "Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Sumatran Tiger",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Tropical", "Wetlands"],
+    "continent": ["Asia"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Western Chimpanzee",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Tropical"],
+    "continent": ["Africa"],
+    "conservation": ["Critically Endangered"],
+    "contentPack": "Base Game"
+  }
+]

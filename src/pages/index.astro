@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectInfo from "../components/ProjectInfo.astro";
+import Game from "../components/Game.vue";
+---
+
+<Layout>
+    <h1>PZORDLE</h1>
+    <Game client:load />
+    <ProjectInfo />
+</Layout>
