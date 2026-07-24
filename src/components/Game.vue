@@ -268,6 +268,10 @@ function getCorrectNess(guess, correctValue) {
     color: var(--text-white);
     font-size: var(--type-05);
     font-family: var(--font-eagle-bold);
+    transition: all 200ms ease-in-out;
+    &:hover {
+        background-color: var(--dark-green);
+    }
 }
 .suggestion {
     width: 100%;
