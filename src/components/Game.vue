@@ -71,7 +71,7 @@
     <form class="input-form" @submit.prevent="checkAnswer" v-if="!gameSucceeded">
         <div class="input-form-body">
         <div class="input-container">
-            <input type="text" v-model="guessInput" @input="input" placeholder="Enter an animal" class="input-field">
+            <input type="text" ref="inputField" v-model="guessInput" @input="input" placeholder="Enter an animal" class="input-field">
             <div class="input-suggestions-container" v-if="suggestions.length > 0">
                 <button v-for="suggestion in suggestions" :key="suggestion" @click="selectSuggestion(suggestion)" class="suggestion"><img :src="getImageUrl(suggestion)" :alt="`${ suggestion }`">{{ suggestion }}</button>
             </div>
@@ -92,6 +92,7 @@
   let suggestions = ref([]);
   let correctAnimal = getAnimalOfTheDay();
   const guessInput = defineModel("guessInput");
+  let inputField = ref("")
   let errorMessage = ref("");
   let gameSucceeded = ref(false);
   let gameFailed = ref(false);
@@ -174,6 +175,9 @@
       gameFailed.value = true;
     }
     guessInput.value = "";
+      inputField.value?.focus();
+
+
   }
 function getCorrectNess(guess, correctValue) {
   console.log(guess)
