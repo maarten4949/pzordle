@@ -55,8 +55,6 @@
                 </td>
             </tr>
             </TransitionGroup>
-
-
         </table>
     </div>
     <div v-if="gameSucceeded" class="game-success">
@@ -68,7 +66,10 @@
         <p>The correct animal was: {{correctAnimal.name}}</p>
         <p>Check back tomorrow to guess a new animal.</p>
     </div>
-    <form class="input-form" @submit.prevent="checkAnswer" v-if="!gameSucceeded">
+    <div v-if="isLoading">
+        Loading...
+    </div>
+    <form v-else class="input-form" @submit.prevent="checkAnswer" v-if="!gameSucceeded">
         <div class="input-form-body">
         <div class="input-container">
             <input type="text" ref="inputField" v-model="guessInput" @input="input" placeholder="Enter an animal" class="input-field">
@@ -90,12 +91,36 @@
 
   let guesses = ref([]);
   let suggestions = ref([]);
-  let correctAnimal = getAnimalOfTheDay();
+  let correctAnimal = ref('');
   const guessInput = defineModel("guessInput");
   let inputField = ref("")
+  const isLoading = ref(true);
   let errorMessage = ref("");
   let gameSucceeded = ref(false);
   let gameFailed = ref(false);
+  OnMounted(async () => {
+    try {
+        const response = await fetch('/api/today');
+
+        if (!response.ok) {
+          throw new Error(`Server returned status: ${response.status}`);
+        }
+      const data = await response.json();
+
+        const animalNameToGuess = data.answer;
+      correctAnimal = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
+
+      } catch (err) {
+        console.error('Failed to load today\'s character:', err);
+        error.value = 'Could not load today\'s puzzle. Please try again!';
+      } finally {
+        isLoading.value = false;
+      }
+    });
+
+
+
+
   function getSeededIndex(dateStr, maxIndex) {
     let hash = 0;
 

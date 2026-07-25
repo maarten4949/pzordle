@@ -114,11 +114,15 @@ p {
     max-width: 80ch;
 }
 footer {
-    font-size: var(--type-01);
-    line-height: var(--spacing-05);
+
     margin: 0 auto;
     align-self: end;
     margin-top: var(--spacing-07);
+    & > p {
+        font-size: var(--type-01);
+        line-height: var(--spacing-05);
+        max-width: 100%;
+    }
 }
 a {
     color: var(--SharkFin);
