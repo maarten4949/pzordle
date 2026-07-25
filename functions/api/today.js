@@ -5,6 +5,14 @@ const ALL_ANIMALS =
 export async function onRequestGet(context) {
   const KV = context.env.PZORDLE_KV_BINDING;
 
+  if (!KV) {
+      return new Response(
+        JSON.stringify({
+          error: "Could not connect to storage."
+        }),
+        { status: 500, headers: { "Content-Type": "application/json" } }
+      );
+    }
   let todayAnswer = await KV.get("TODAY");
 
   if (!todayAnswer) {
