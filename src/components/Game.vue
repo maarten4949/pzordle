@@ -1,4 +1,3 @@
-
 <template>
     <div class = "game-grid">
         <table class="answer-grid">
@@ -98,6 +97,7 @@
   let errorMessage = ref("");
   let gameSucceeded = ref(false);
   let gameFailed = ref(false);
+  
   onMounted(async () => {
     try {
         const response = await fetch('/api/today');
@@ -115,19 +115,7 @@
         isLoading.value = false;
       }
     });
-  function getImageUrl(name) {
-    return new URL(`../assets/images/${name}.webp`, import.meta.url).href;
-  }
-  function getAnimalSchedule() {
-    let animalOfTheDay = "";
-    const today = new Date().toISOString().split('T')[0];
-    for (let i = 0; i < schedule.length; i++) {
-      if (schedule[i].date === today) {
-        animalOfTheDay = schedule[i].animal;
-      }
-    }
-    return animals.find(animal => animal.name.toLowerCase() === animalOfTheDay.toLowerCase());
-  }
+
   function input(e){
     errorMessage.value = "";
     suggestions.value = [];
@@ -139,7 +127,6 @@
     }
   }
   function selectSuggestion(suggestion) {
-    console.log("selected suggestion", suggestion);
     guessInput.value = suggestion;
     checkAnswer();
   }
@@ -149,18 +136,13 @@
     if (answer === "") return;
 
     var guessedAnimal = animals.find(animal => animal.name.toLowerCase() === answer.toLowerCase());
-
     if (guessedAnimal === undefined) {
-      console.log("Animal not in list")
       errorMessage.value = "Animal is not in the list of valid animals"
     }
-    else if (guesses.value.length > 0 && guesses.value.find(guess => guess.name.value.toLowerCase() === guessedAnimal.name.toLowerCase()) != undefined)
-    {
-        console.log("already guessed");
+    else if (guesses.value.length > 0 && guesses.value.find(guess => guess.name.value.toLowerCase() === guessedAnimal.name.toLowerCase()) != undefined){
         errorMessage.value = "You already guessed this animal"
     }
     else {
-      console.log("guessing")
       guesses.value.push({
         name: { value: guessedAnimal.name, correctness: getCorrectNess(guessedAnimal.name, correctAnimal.name) },
         habitat: { value: guessedAnimal.habitat, correctness: getCorrectNess(guessedAnimal.habitat, correctAnimal.habitat) },
@@ -174,29 +156,22 @@
       console.log("Game succeeded")
       gameSucceeded.value = true;
     }
-
     else if (guesses.value.length === 5) {
       console.log("Game Failed")
       gameFailed.value = true;
     }
     guessInput.value = "";
       inputField.value?.focus();
-
-
   }
   function getCorrectNess(guess, correctValue) {
   console.log(guess)
     console.log(correctValue)
     if (Array.isArray(guess) && compareArrays(guess, correctValue))
     {
-      console.log("return correct")
-
       return correctness.correct;
       }
     if (Array.isArray(guess) === false && guess.toLowerCase() === correctValue.toLowerCase())
     {
-      console.log("return correct")
-
       return correctness.correct;
     }
     if (Array.isArray(guess))
@@ -205,21 +180,47 @@
       {
         if (correctValue.includes(guessedValue))
         {
-          console.log("return partially correct")
-
           return correctness.partiallyCorrect;
         }
       }
     }
-    console.log("return incorrect")
     return correctness.incorrect;
   }
   const compareArrays = (a, b) => {
     return a.toString() === b.toString();
   };
-</script>
+  function getImageUrl(name) {
+    return new URL(`../assets/images/${name}.webp`, import.meta.url).href;
+  }
+  function getAnimalSchedule() {
+    let animalOfTheDay = "";
+    const today = new Date().toISOString().split('T')[0];
+    for (let i = 0; i < schedule.length; i++) {
+      if (schedule[i].date === today) {
+        animalOfTheDay = schedule[i].animal;
+      }
+    }
+    return animals.find(animal => animal.name.toLowerCase() === animalOfTheDay.toLowerCase());
+  }
+  </script>
 
 <style>
+table {
+    border-collapse: collapse;
+    border-spacing: var(--spacing-03) var(--spacing-03);
+}
+table tbody tr:first-child td:first-child{
+    border-top-left-radius: var(--radii-m);
+}
+table tbody tr:first-child td:last-child{
+    border-top-right-radius: var(--radii-m);
+}
+table tbody tr:last-child td:first-child{
+    border-bottom-left-radius: var(--radii-m);
+}
+table tbody tr:last-child td:last-child{
+    border-bottom-right-radius: var(--radii-m);
+}
 .list-enter-active {
   transition: all 0.3s ease-in-out;
 }
@@ -245,13 +246,6 @@
 .answer-grid{
     width: 100%;
 }
-.answer-row:first-child{
-    border-top-right-radius: var(--radii-m);
-}
-.answer-row:last-child{
-    border-bottom-left-radius: var(--radii-m);
-    border-bottom-right-radius: var(--radii-m);
-}
 .input-form{
     display: flex;
     flex-direction: column;
@@ -270,7 +264,6 @@
     align-items: start;
     gap: var(--spacing-06);
     padding-block: var(--spacing-05);
-
 }
 .input-field {
     width: 100%;
@@ -278,7 +271,7 @@
     border-radius: var(--radii-m);
     padding: var(--spacing-04) var(--spacing-05);
     min-width: 50%;
-     font-size: var(--type-05);
+    font-size: var(--type-05);
 }
 .submit-button {
 
@@ -310,7 +303,6 @@
     &:hover, &:focus-visible {
         background-color: var(--bg-1);
     }
-
 }
 .input-suggestions-container {
     background-color: var(--bg-2);
@@ -318,22 +310,7 @@
     border-radius: var(--radii-m);
     padding: var(--spacing-04) var(--spacing-05);
 }
-table {
-    border-collapse: collapse;
-    border-spacing: var(--spacing-03) var(--spacing-03);
-}
-table tbody tr:first-child td:first-child{
-    border-top-left-radius: var(--radii-m);
-}
-table tbody tr:first-child td:last-child{
-    border-top-right-radius: var(--radii-m);
-}
-table tbody tr:last-child td:first-child{
-    border-bottom-left-radius: var(--radii-m);
-}
-table tbody tr:last-child td:last-child{
-    border-bottom-right-radius: var(--radii-m);
-}
+
 .game-success {
     padding: var(--spacing-04) var(--spacing-06);
     margin-block:var(--spacing-06);
