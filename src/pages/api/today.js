@@ -5,7 +5,7 @@ const ALL_ANIMALS = [
 ];
 
 export async function GET(context) {
-  const KV = context.locals?.runtime?.env?.PZORDLE_KV_BINDING;
+  const KV = context.locals?.runtime?.env?.PZORDLE_KV;
 
   if (!KV) {
     return new Response(
