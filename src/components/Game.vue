@@ -336,7 +336,7 @@ table tbody tr:last-child td:last-child{
 }
 .game-success {
     padding: var(--spacing-04) var(--spacing-06);
-    margin-bottom:var(--spacing-06);
+    margin-block:var(--spacing-06);
 
     border-radius: var(--radii-m);
     display:flex;
@@ -347,7 +347,7 @@ table tbody tr:last-child td:last-child{
 }
 .game-failed {
     padding: var(--spacing-04) var(--spacing-06);
-    margin-bottom:var(--spacing-06);
+    margin-block:var(--spacing-06);
 
     border-radius: var(--radii-m);
     display:flex;
