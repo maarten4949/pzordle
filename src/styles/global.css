@@ -16,7 +16,6 @@
     --ParrotWingDark: hsla(173, 28%, 47%, 1);
     --Red:hsla(5, 80%, 61%, 1);
 
-
     --spacing-baseline: .5rem;
     --spacing-01: 0.125rem;
     --spacing-02:0.25rem;
@@ -96,12 +95,10 @@ body {
 button, input {
     font-family: var(--font-noto-sans);
 }
-
 h1 {
     font-size: var(--type-15);
     font-family: var(--font-eagle-bold);
     text-align: center;
-
 }
 h2 {
     font-family: var(--font-eagle-bold);
@@ -114,7 +111,6 @@ p {
     max-width: 80ch;
 }
 footer {
-
     margin: 0 auto;
     align-self: end;
     margin-top: var(--spacing-07);
