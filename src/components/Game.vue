@@ -83,7 +83,7 @@
     </form>
 </template>
 <script setup>
-  import { ref } from 'vue'
+  import { ref, onMounted } from 'vue'
   import animals from "../assets/animals.json"
   import schedule from "../assets/schedule.json"
 
@@ -98,7 +98,7 @@
   let errorMessage = ref("");
   let gameSucceeded = ref(false);
   let gameFailed = ref(false);
-  OnMounted(async () => {
+  onMounted(async () => {
     try {
         const response = await fetch('/api/today');
 
@@ -112,7 +112,7 @@
 
       } catch (err) {
         console.error('Failed to load today\'s character:', err);
-        error.value = 'Could not load today\'s puzzle. Please try again!';
+        errorMessage.value = 'Could not load today\'s puzzle. Please try again!';
       } finally {
         isLoading.value = false;
       }

@@ -4,7 +4,7 @@ const ALL_ANIMALS =
 
 export default {
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(pickNextAnswer(env.PZORDLE_KV_BINDING));
+    ctx.waitUntil(pickNextAnswer(env.PZORDLE_KV));
   },
 };
 
