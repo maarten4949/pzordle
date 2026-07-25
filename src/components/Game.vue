@@ -101,15 +101,13 @@
   onMounted(async () => {
     try {
         const response = await fetch('/api/today');
-
         if (!response.ok) {
           throw new Error(`Server returned status: ${response.status}`);
         }
-      const data = await response.json();
+        const data = await response.json();
 
         const animalNameToGuess = data.answer;
-      correctAnimal = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
-
+        correctAnimal = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
       } catch (err) {
         console.error('Failed to load today\'s character:', err);
         errorMessage.value = 'Could not load today\'s puzzle. Please try again!';
@@ -117,34 +115,16 @@
         isLoading.value = false;
       }
     });
-
-
-
-
-  function getSeededIndex(dateStr, maxIndex) {
-    let hash = 0;
-
-    for (let i = 0; i < dateStr.length; i++) {
-      hash = (hash << 5) - hash + dateStr.charCodeAt(i);
-      hash |= 0;
-    }
-
-    return Math.abs(hash) % maxIndex;
-  }
   function getImageUrl(name) {
     return new URL(`../assets/images/${name}.webp`, import.meta.url).href;
   }
-  function getAnimalOfTheDay() {
+  function getAnimalSchedule() {
     let animalOfTheDay = "";
     const today = new Date().toISOString().split('T')[0];
     for (let i = 0; i < schedule.length; i++) {
       if (schedule[i].date === today) {
         animalOfTheDay = schedule[i].animal;
       }
-    }
-    if (animalOfTheDay === "") {
-      const index = getSeededIndex(today, animals.length);
-      return animals[index];
     }
     return animals.find(animal => animal.name.toLowerCase() === animalOfTheDay.toLowerCase());
   }
@@ -204,7 +184,7 @@
 
 
   }
-function getCorrectNess(guess, correctValue) {
+  function getCorrectNess(guess, correctValue) {
   console.log(guess)
     console.log(correctValue)
     if (Array.isArray(guess) && compareArrays(guess, correctValue))
