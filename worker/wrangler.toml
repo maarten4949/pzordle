@@ -6,5 +6,5 @@ compatibility_date = "2026-07-25"
 crons = ["0 0 * * *"] # midnight
 
 [[kv_namespaces]]
-binding = "PZORDLE_KV"
+binding = "v"
 id = "1da8c6a89c384baba73c64bcdf9aec1a"
