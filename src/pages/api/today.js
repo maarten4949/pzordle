@@ -1,3 +1,4 @@
+import { env } from "cloudflare:workers";
 export const prerender = false;
 
 const ALL_ANIMALS = [
@@ -5,7 +6,7 @@ const ALL_ANIMALS = [
 ];
 
 export async function GET(context) {
-  const KV = context.locals?.runtime?.env?.PZORDLE_KV;
+  const KV = env.PZORDLE_KV;
 
   if (!KV) {
     return new Response(
