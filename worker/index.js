@@ -1,6 +1,6 @@
-const ALL_ANIMALS =
-  ["Aardvark", "African Leopard", "African Penguin", "African Savannah Elephant", "African Tigerfish", "Axolotl", "Blacktip Reef Shark", "Blue and Gold Fusilier", "Blue Wildebeest", "Blunthead Cichlid", "Boa Constrictor", "Brown Trout", "Common Bluetongue", "Common Hippopotamus", "Danube Crested Newt", "Eurasian Brown Bear", "European Bison", "European Peacock", "Fire Salamander", "Gemsbok", "Gharial", "Giant Malaysian Leaf Insect", "Gila Monster", "Golden Eagle", "Golden Lion Tamarin", "Golden Poison Frog", "Goodfellow's Tree-Kangaroo", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "Lion", "Longfin Batfish", "Masai Giraffe", "Ocean Sunfish", "Plains Zebra", "Red Deer", "Red Lionfish", "Red Panda", "Saltwater Crocodile", "Schooling Bannerfish", "Secretarybird", "Spotted Eagle Ray", "Springbok", "Sumatran Tiger",
-    "Western Chimpanzee"];
+const ALL_ANIMALS = [
+  "Aardvark", "African Leopard", "African Penguin", "African Savannah Elephant", "African Tigerfish","American Bullfrog", "Axolotl","Blackspotted Puffer", "Blacktip Reef Shark", "Blue and Gold Fusilier", "Blue Wildebeest", "Blunthead Cichlid", "Boa Constrictor", "Brown Trout", "Clown Loach", "Common Bluetongue", "Common Hippopotamus", "Danube Crested Newt", "Diamondback Terrapin", "Eurasian Brown Bear", "European Bison", "European Peacock", "Fire Salamander", "Gemsbok", "Gharial", "Giant Malaysian Leaf Insect", "Gila Monster", "Golden Eagle", "Golden Lion Tamarin", "Golden Poison Frog","Golden Trevally", "Goodfellow's Tree-Kangaroo", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "Lion", "Longfin Batfish", "Masai Giraffe", "Ocean Sunfish","Pacific Sardine", "Plains Zebra", "Red Deer", "Red Lionfish", "Red Panda","Reticulated Giraffe", "Saltwater Crocodile", "Schooling Bannerfish", "Secretarybird", "Spotted Eagle Ray", "Springbok", "Sumatran Tiger", "Western Chimpanzee"
+];
 
 export default {
   async scheduled(event, env, ctx) {

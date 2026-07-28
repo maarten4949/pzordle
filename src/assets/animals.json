@@ -41,12 +41,28 @@
     "contentPack": "Base Game"
   },
   {
+    "name": "American Bullfrog",
+    "habitat": ["Exhibit"],
+    "biome": ["Temperate", "Wetlands"],
+    "continent": ["North America"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
     "name": "Axolotl",
     "habitat": ["Exhibit"],
     "biome": ["Desert", "Wetlands"],
     "continent": ["North America"],
     "conservation": ["Critically Endangered"],
     "contentPack": "Deluxe"
+  },
+  {
+    "name": "Blackspotted Puffer",
+    "habitat": ["Aquarium"],
+    "biome": ["Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
   },
   {
     "name": "Blacktip Reef Shark",
@@ -97,6 +113,14 @@
     "contentPack": "Base Game"
   },
   {
+    "name": "Clown Loach",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Lakes and Rivers"],
+    "continent": ["Asia"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
     "name": "Common Bluetongue",
     "habitat": ["Exhibit"],
     "biome": ["Grassland", "Temperate", "Tropical"],
@@ -118,6 +142,14 @@
     "biome": ["Temperate","Wetlands"],
     "continent": ["Europe"],
     "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Diamondback Terrapin",
+    "habitat": ["Exhibit"],
+    "biome": ["Temperate", "Wetlands"],
+    "continent": ["North America"],
+    "conservation": ["Vulnerable"],
     "contentPack": "Base Game"
   },
   {
@@ -207,6 +239,13 @@
     "continent": ["South America"],
     "conservation": ["Endangered"],
     "contentPack": "Base Game"
+  }, {
+    "name": "Golden Trevally",
+    "habitat": ["Aquarium"],
+    "biome": ["Estaurine", "Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
   },
   {
     "name": "Goodfellow's Tree-Kangaroo",
@@ -273,6 +312,14 @@
     "contentPack": "Base Game"
   },
   {
+    "name": "Pacific Sardine",
+    "habitat": ["Aquarium"],
+    "biome": ["Open Sea"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
     "name": "Plains Zebra",
     "habitat": ["Habitat-Terrestrial"],
     "biome": ["Grassland"],
@@ -301,6 +348,14 @@
     "habitat": ["Habitat-Terrestrial"],
     "biome": ["Taiga", "Temperate"],
     "continent": ["Asia"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Reticulated Giraffe",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
     "conservation": ["Endangered"],
     "contentPack": "Base Game"
   },
