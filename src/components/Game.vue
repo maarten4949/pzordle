@@ -63,7 +63,7 @@
     </div>
     <div v-if="gameSucceeded" class="game-success">
         <h2>You guessed correctly!</h2>
-        <span v-if="!props.isDaily">Check back tomorrow to guess a new animal.</span>
+        <span v-if="props.isDaily">Check back tomorrow to guess a new animal.</span>
         <div v-if="!props.isDaily">
             <button @click="restartGame" class="button">Go Again</button>
         </div>
