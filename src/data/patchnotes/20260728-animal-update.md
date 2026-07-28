@@ -17,3 +17,4 @@ This update brings 7 new animals (the ones that just got revealed in the Zoopedi
 <b>Fixes:</b>
 
 - Fixed navbar on mobile overflowing
+- Fixed missing gap between items in patch notes
