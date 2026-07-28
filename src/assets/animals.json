@@ -97,7 +97,7 @@
     "contentPack": "Base Game"
   },
   {
-    "name": "Common BlueTongue",
+    "name": "Common Bluetongue",
     "habitat": ["Exhibit"],
     "biome": ["Grassland", "Temperate", "Tropical"],
     "continent": ["Oceania"],
