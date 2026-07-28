@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { Font } from "astro:assets";
 import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <!doctype html>
@@ -17,6 +18,7 @@ import Footer from "../components/Footer.astro";
         <title>Pzordle - Planet Zoo 2 Guessing Game</title>
     </head>
     <body>
+        <Navbar />
         <main>
             <slot />
         </main>
@@ -30,11 +32,15 @@ import Footer from "../components/Footer.astro";
         height: 100%;
         min-height: 100svh;
         display: grid;
+        grid-template-rows: auto 1fr auto;
         max-width: 80rem;
         margin: 0 auto;
         padding-inline: var(--spacing-07);
         padding-block: var(--spacing-07);
         box-sizing: border-box;
+    }
+    main {
+        margin-top: var(--spacing-09);
     }
     @media (width < 500px) {
         body {

@@ -3,6 +3,7 @@
     --BearsPaw:hsla(25, 21%, 37%, 1);
     --BearsPawDark:hsla(42, 11%, 18%, 1);
     --ZebraStripe:hsla(37, 100%, 93%, 1);
+    --ZebraStripeHover:hsla(37, 30%, 70%, 1);
     --ZebraStripeDark:hsla(37, 38%, 84%, 1);
     --ToucansBeak: hsla(34, 100%, 67%, 1);
     --ToucansBeakDark:hsla(25, 80%, 61%, 1);
@@ -64,6 +65,7 @@
     --radii-l: 12px;
 
     --text-normal: var(--ZebraStripe);
+    --text-hover: var(--ZebraStripeHover);
     --text-soft: var(--ZebraStripeDark);
     --text-white: var(--ZebraStripe);
     --text-title: var(--ZebraStripe);

@@ -1,0 +1,39 @@
+<nav class="nav">
+    <div class="nav-group"></div>
+    <div class="nav-group">
+        <a href="/" class="nav-link">Daily Puzzle</a>
+        <a href="/practice" class="nav-link">Practice Mode</a>
+    </div>
+    <div class="nav-group right">
+        <a href="/patch-notes" class="nav-link">Patch Notes</a>
+    </div>
+</nav>
+
+<style>
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--spacing-06);
+    }
+    .nav-group {
+        justify-content: center;
+        flex-basis: 33.3%;
+        display: flex;
+        flex-grow: 1;
+        gap: var(--spacing-06);
+        &.right {
+            justify-content: flex-end;
+        }
+        &.left {
+            justify-content: flex-start;
+        }
+    }
+    .nav-link {
+        color: var(--text-normal);
+        transition: color 0.2s ease-in-out;
+        text-decoration: none;
+        &:hover {
+            color: var(--text-hover);
+        }
+    }
+</style>
