@@ -1,7 +1,9 @@
 {
 	"$schema": "./node_modules/wrangler/config-schema.json",
 	"compatibility_date": "2026-07-25",
-	"compatibility_flags": ["global_fetch_strictly_public"],
+	"compatibility_flags": [
+		"global_fetch_strictly_public"
+	],
 	"name": "pzordle",
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {
@@ -11,10 +13,10 @@
 	"observability": {
 		"enabled": true
 	},
- "kv_namespaces": [
-    {
-      "binding": "PZORDLE_KV",
-      "id": "1da8c6a89c384baba73c64bcdf9aec1a"
-    }
-  ]
+	"kv_namespaces": [
+		{
+			"binding": "PZORDLE_KV",
+			"id": "1da8c6a89c384baba73c64bcdf9aec1a"
+		}
+	]
 }

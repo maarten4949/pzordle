@@ -1,6 +1,9 @@
 <template>
-    <h1>Pzordle #{{ dayCount }}</h1>
-    <h2>{{ lastUpdated }}</h2>
+    <header>
+        <h1 v-if="isDaily">Pzordle {{ dayCount > 0 ? "#" + dayCount : "" }}</h1>
+        <h1 v-else>Pzordle Practice</h1>
+        <p>{{ lastUpdated }}</p>
+    </header>
     <div class = "game-grid">
         <table class="answer-grid">
             <thead>
@@ -119,7 +122,8 @@
             throw new Error(`Server returned status: ${response.status}`);
           }
           const data = await response.json();
-          lastUpdated.value = data.lastUpdated;
+          const date = new Date(data.lastUpdated);
+          lastUpdated.value = date.toLocaleDateString();
           dayCount.value = data.count;
           const animalNameToGuess = data.answer;
           correctAnimal = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
@@ -233,6 +237,16 @@
   </script>
 
 <style>
+header{
+    text-align: center;
+    margin-bottom: var(--spacing-08);
+    & p {
+        font-family: var(--font-noto-sans);
+        font-size: var(--type-03);
+        max-width: 100%;
+    }
+}
+
 table {
     border-collapse: collapse;
     border-spacing: var(--spacing-03) var(--spacing-03);

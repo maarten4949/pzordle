@@ -3,6 +3,8 @@ import "../styles/global.css";
 import { Font } from "astro:assets";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,7 +17,7 @@ import Navbar from "../components/Navbar.astro";
         <meta name="generator" content={Astro.generator} />
         <Font cssVariable="--font-noto-sans" />
         <Font cssVariable="--font-eagle-bold" />
-        <title>Pzordle - Planet Zoo 2 Guessing Game</title>
+        <title>Pzordle - {title}</title>
     </head>
     <body>
         <Navbar />

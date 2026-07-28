@@ -1,0 +1,63 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+const patchnotes = await getCollection("patchnotes");
+---
+
+<Layout>
+    <h1>Patch notes</h1>
+    <ul>
+        {
+            patchnotes.map(
+                (note: {
+                    id: string;
+                    body?: string;
+                    collection: "patchnotes";
+                    data: InferEntrySchema<"patchnotes">;
+                    rendered?: RenderedContent;
+                    filePath?: string;
+                }) => (
+                    <li>
+                        <a href={`/patch-notes/${note.id}`}>
+                            <span class="title">{note.data.title}</span>
+                            <span class="date">
+                                {note.data.date.toLocaleDateString()}
+                            </span>
+                        </a>
+                    </li>
+                ),
+            )
+        }
+    </ul>
+</Layout>
+
+<style>
+    h1 {
+        margin-bottom: var(--spacing-08);
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        padding: var(--spacing-06) var(--spacing-08);
+        background-color: var(--bg-2);
+        border-radius: var(--radii-m);
+        color: var(--text-normal);
+        & a {
+            & .title {
+                font-size: var(--type-06);
+                font-weight: 600;
+            }
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-04);
+            color: var(--text-normal);
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+            &:hover {
+                color: var(--text-hover);
+            }
+        }
+    }
+</style>

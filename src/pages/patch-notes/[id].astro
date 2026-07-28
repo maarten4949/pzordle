@@ -1,0 +1,56 @@
+---
+import { getEntry, getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+export async function getStaticPaths() {
+    const projects = await getCollection("patchnotes");
+    return projects.map((project) => ({
+        params: { id: project.id },
+        props: { patchnote: project }, // Pass entry directly
+    }));
+}
+const patchnote = Astro.props.patchnote;
+
+if (!patchnote) {
+    return Astro.redirect("/404");
+}
+
+const { Content } = await render(patchnote);
+---
+
+<Layout title={`Patch note: ${patchnote.data.title}`}>
+    <article>
+        <header>
+            <h1>{patchnote.data.title}</h1>
+            <p>{patchnote.data.date.toLocaleDateString()}</p>
+        </header>
+        <p>{patchnote.data.description}</p>
+        <div class="patchnote-content">
+            <Content />
+        </div>
+    </article>
+</Layout>
+
+<style>
+    header {
+        text-align: left;
+        & h1 {
+            text-align: left;
+        }
+        & p {
+            max-width: 100%;
+        }
+        margin-bottom: var(--spacing-08);
+    }
+    .patchnote-content {
+        & p {
+            margin-block: var(--spacing-05);
+        }
+        & b {
+            font-weight: 700;
+            font-size: var(--type-05);
+        }
+        & li {
+            margin-bottom: var(--spacing-03);
+        }
+    }
+</style>

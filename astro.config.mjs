@@ -30,7 +30,7 @@ export default defineConfig({
     options: {
       variants: [{
         src: ['./src/assets/fonts/NotoSans-VariableFont_wdth,wght.ttf'],
-        weight: 'normal',
+        weight: 'normal, 600, 700, 800',
         style: 'normal'
       }]
     }
