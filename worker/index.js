@@ -11,8 +11,10 @@ export default {
 async function pickNextAnswer(KV) {
   const allHistory = await KV.get("ALL_HISTORY");
   const playedJson = await KV.get("RECENTLY_PLAYED");
+  let count = await KV.get("COUNT");
   let playedAnimals = playedJson ? JSON.parse(playedJson) : [];
   let allHistoryList = allHistory ? JSON.parse(allHistory) : [];
+
 
   let remaining = ALL_ANIMALS.filter(id => !playedAnimals.includes(id));
 
@@ -27,6 +29,14 @@ async function pickNextAnswer(KV) {
 
   playedAnimals.push(selectedAnswer);
   allHistoryList.push({"date": currentTime, "answer": selectedAnswer});
+
+  if (count) {
+    count = parseInt(count) + 1;
+    await KV.put("COUNT", count);
+  } else {
+    count = allHistoryList.length + 1;
+    await KV.put("COUNT", count);
+  }
 
   await KV.put("TODAY", selectedAnswer);
   await KV.put("LAST_UPDATED", currentTime);

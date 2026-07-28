@@ -18,12 +18,14 @@ export async function GET(context) {
   }
 
   let todayAnswer = await KV.get("TODAY");
+  let count = await KV.get("COUNT");
+  let lastUpdated = await KV.get("LAST_UPDATED");
 
   if (!todayAnswer) {
     todayAnswer = await pickNextAnswer(KV);
   }
 
-  return new Response(JSON.stringify({ answer: todayAnswer }), {
+  return new Response(JSON.stringify({ answer: todayAnswer, count: count, lastUpdated: lastUpdated }), {
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
@@ -35,6 +37,8 @@ export async function GET(context) {
 async function pickNextAnswer(KV) {
   const allHistory = await KV.get("ALL_HISTORY");
   const playedJson = await KV.get("RECENTLY_PLAYED");
+  let count = await KV.get("COUNT");
+
   let playedAnimals = playedJson ? JSON.parse(playedJson) : [];
   let allHistoryList = allHistory ? JSON.parse(allHistory) : [];
 
@@ -51,6 +55,13 @@ async function pickNextAnswer(KV) {
 
   playedAnimals.push(selectedAnswer);
   allHistoryList.push({ "date": currentTime, "answer": selectedAnswer });
+  if (count) {
+    count = parseInt(count) + 1;
+    await KV.put("COUNT", count);
+  } else {
+    count = allHistoryList.length + 1;
+    await KV.put("COUNT", count);
+  }
 
   await KV.put("TODAY", selectedAnswer);
   await KV.put("LAST_UPDATED", currentTime);

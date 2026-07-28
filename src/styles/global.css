@@ -98,7 +98,7 @@ button, input {
     font-family: var(--font-noto-sans);
 }
 h1 {
-    font-size: var(--type-15);
+    font-size: var(--type-12);
     font-family: var(--font-eagle-bold);
     text-align: center;
 }

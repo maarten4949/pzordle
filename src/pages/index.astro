@@ -6,6 +6,12 @@ import Game from "../components/Game.vue";
 
 <Layout>
     <h1>PZORDLE</h1>
-    <Game client:load />
+    <Game client:load isDaily={true} />
     <ProjectInfo />
 </Layout>
+
+<style>
+    h1 {
+        margin-bottom: var(--spacing-08);
+    }
+</style>

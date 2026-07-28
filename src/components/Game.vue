@@ -58,12 +58,18 @@
     </div>
     <div v-if="gameSucceeded" class="game-success">
         <h2>You guessed correctly!</h2>
-        <span>Check back tomorrow to guess a new animal.</span>
+        <span v-if="!props.isDaily">Check back tomorrow to guess a new animal.</span>
+        <div v-if="!props.isDaily">
+            <button @click="restartGame" class="button">Go Again</button>
+        </div>
     </div>
     <div v-if="gameFailed" class="game-failed">
         <h2>Better luck next time!</h2>
         <p>The correct animal was: {{correctAnimal.name}}</p>
-        <p>Check back tomorrow to guess a new animal.</p>
+        <p v-if="props.isDaily">Check back tomorrow to guess a new animal.</p>
+        <div v-if="!props.isDaily">
+            <button @click="restartGame" class="button">Restart Game</button>
+        </div>
     </div>
     <div v-if="isLoading">
         Loading...
@@ -85,7 +91,9 @@
   import { ref, onMounted } from 'vue'
   import animals from "../assets/animals.json"
   import schedule from "../assets/schedule.json"
-
+  const props = defineProps({
+    isDaily: Boolean
+  })
   const correctness = { correct: "correct", incorrect: "incorrect", partiallyCorrect: "partially-correct" }
 
   let guesses = ref([]);
@@ -97,17 +105,23 @@
   let errorMessage = ref("");
   let gameSucceeded = ref(false);
   let gameFailed = ref(false);
-  
+
   onMounted(async () => {
     try {
-        const response = await fetch('/api/today');
-        if (!response.ok) {
-          throw new Error(`Server returned status: ${response.status}`);
-        }
-        const data = await response.json();
+        if (props.isDaily)
+        {
+          const response = await fetch('/api/today');
+          if (!response.ok) {
+            throw new Error(`Server returned status: ${response.status}`);
+          }
+          const data = await response.json();
 
-        const animalNameToGuess = data.answer;
-        correctAnimal = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
+          const animalNameToGuess = data.answer;
+          correctAnimal = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
+        }
+        else {
+          correctAnimal = animals[Math.floor(Math.random() * animals.length)];
+        }
       } catch (err) {
         console.error('Failed to load today\'s character:', err);
         errorMessage.value = 'Could not load today\'s puzzle. Please try again!';
@@ -125,6 +139,15 @@
         suggestions.value.push(animals[i].name);
       }
     }
+  }
+  function restartGame() {
+    guesses.value = [];
+    errorMessage.value = "";
+    guessInput.value = "";
+    gameSucceeded.value = false;
+    gameFailed.value = false;
+    correctAnimal = animals[Math.floor(Math.random() * animals.length)];
+
   }
   function selectSuggestion(suggestion) {
     guessInput.value = suggestion;
@@ -273,7 +296,7 @@ table tbody tr:last-child td:last-child{
     min-width: 50%;
     font-size: var(--type-05);
 }
-.submit-button {
+.submit-button, .button {
 
     padding: var(--spacing-04) var(--spacing-05);
     background-color: var(--green);
@@ -339,7 +362,7 @@ table tbody tr:last-child td:last-child{
 .answer-cell {
     box-sizing:border-box;
     min-width:calc(var(--spacing-06) * 2 + 2.8645625rem);
-    padding: var(--spacing-04) var(--spacing-06);
+    padding: var(--spacing-06) var(--spacing-06);
     gap: var(--spacing-02);
      & div:not(:first-child)
      {
