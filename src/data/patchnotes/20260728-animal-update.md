@@ -13,3 +13,7 @@ This update brings 7 new animals (the ones that just got revealed in the Zoopedi
 - Added Golden Trevally
 - Added Pacific Sardine
 - Added Reticulated Giraffe
+
+<b>Fixes:</b>
+
+- Fixed navbar on mobile overflowing
