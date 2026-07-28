@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectInfo from "../components/ProjectInfo.astro";
+import Game from "../components/Game.vue";
+---
+
+<Layout>
+    <h1>Pzordle Practice Mode</h1>
+    <Game client:load isDaily={false} />
+    <ProjectInfo />
+</Layout>
+<style>
+    h1 {
+        margin-bottom: var(--spacing-08);
+    }
+</style>
