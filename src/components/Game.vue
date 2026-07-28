@@ -1,4 +1,6 @@
 <template>
+    <h1>Pzordle #{{ dayCount }}</h1>
+    <h2>{{ lastUpdated }}</h2>
     <div class = "game-grid">
         <table class="answer-grid">
             <thead>
@@ -102,6 +104,8 @@
   const guessInput = defineModel("guessInput");
   let inputField = ref("")
   const isLoading = ref(true);
+  const lastUpdated = ref("");
+  const dayCount = ref(0);
   let errorMessage = ref("");
   let gameSucceeded = ref(false);
   let gameFailed = ref(false);
@@ -115,7 +119,8 @@
             throw new Error(`Server returned status: ${response.status}`);
           }
           const data = await response.json();
-
+          lastUpdated.value = data.lastUpdated;
+          dayCount.value = data.count;
           const animalNameToGuess = data.answer;
           correctAnimal = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
         }
