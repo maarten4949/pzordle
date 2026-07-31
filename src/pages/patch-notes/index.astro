@@ -1,5 +1,9 @@
 ---
-import { getCollection } from "astro:content";
+import {
+    getCollection,
+    InferEntrySchema,
+    RenderedContent,
+} from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 const patchnotes = await getCollection("patchnotes");
 ---

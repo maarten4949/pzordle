@@ -116,7 +116,7 @@ footer {
     margin: 0 auto;
     align-self: end;
     margin-top: var(--spacing-07);
-    & > p {
+    & p {
         font-size: var(--type-01);
         line-height: var(--spacing-05);
         max-width: 100%;

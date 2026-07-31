@@ -6,5 +6,9 @@ compatibility_date = "2026-07-25"
 crons = ["0 0 * * *"] # midnight
 
 [[kv_namespaces]]
-binding = "v"
+binding = "PZORDLE_KV"
 id = "1da8c6a89c384baba73c64bcdf9aec1a"
+
+[observability.logs]
+enabled = true
+invocation_logs = true
