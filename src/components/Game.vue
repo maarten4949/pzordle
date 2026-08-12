@@ -408,13 +408,13 @@ table tbody tr:last-child td:last-child{
 }
 @container game-grid (width < 700px)
 {
-   .header-grid span {
-    padding: var(--spacing-02) var(--spacing-04);
+   .header-grid th {
+    padding: var(--spacing-04) var(--spacing-03);
     font-size: var(--type-02);
     line-height: var(--spacing-05);
     }
     .answer-cell {
-        padding: var(--spacing-02) var(--spacing-04);
+        padding: var(--spacing-04) var(--spacing-03);
         min-width:calc(var(--spacing-03) * 2 + 2.8645625rem);
         font-size: var(--type-02);
         line-height: var(--spacing-05);

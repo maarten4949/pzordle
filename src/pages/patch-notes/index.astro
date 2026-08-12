@@ -1,11 +1,17 @@
 ---
 import {
     getCollection,
-    InferEntrySchema,
-    RenderedContent,
+    type InferEntrySchema,
+    type RenderedContent,
 } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-const patchnotes = await getCollection("patchnotes");
+const patchnotes = await getCollection("patchnotes").then((notes) => {
+    return notes.sort((a, b) => {
+        return (
+            new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+        );
+    });
+});
 ---
 
 <Layout>

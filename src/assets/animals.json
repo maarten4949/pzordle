@@ -67,7 +67,7 @@
   {
     "name": "Blacktip Reef Shark",
     "habitat": ["Aquarium"],
-    "biome": ["Estaurine", "Mangrove", "Reef"],
+    "biome": ["Estuarine", "Mangrove", "Reef"],
     "continent": ["Indian Ocean", "Pacific Ocean"],
     "conservation": ["Vulnerable"],
     "contentPack": "Base Game"
@@ -242,7 +242,7 @@
   }, {
     "name": "Golden Trevally",
     "habitat": ["Aquarium"],
-    "biome": ["Estaurine", "Reef"],
+    "biome": ["Estuarine", "Reef"],
     "continent": ["Indian Ocean", "Pacific Ocean"],
     "conservation": ["Least Concern"],
     "contentPack": "Base Game"
@@ -266,7 +266,7 @@
   {
     "name": "Hawksbill Turtle",
     "habitat": ["Aquarium"],
-    "biome": ["Estaurine", "Mangrove", "Open Sea", "Reef"],
+    "biome": ["Estuarine", "Mangrove", "Open Sea", "Reef"],
     "continent": ["Africa", "Asia", "Atlantic Ocean", "Europe", "Indian Ocean", "North America", "Oceania", "Pacific Ocean", "South America"],
     "conservation": ["Critically Endangered"],
     "contentPack": "Base Game"
@@ -338,7 +338,7 @@
   {
     "name": "Red Lionfish",
     "habitat": ["Aquarium"],
-    "biome": ["Estaurine", "Reef"],
+    "biome": ["Estuarine", "Reef"],
     "continent": ["Indian Ocean", "Pacific Ocean"],
     "conservation": ["Least Concern"],
     "contentPack": "Base Game"
@@ -362,7 +362,7 @@
   {
     "name": "Saltwater Crocodile",
     "habitat": ["Habitat-Terrestrial"],
-    "biome": ["Estaurine", "Mangrove", "Tropical"],
+    "biome": ["Estuarine", "Mangrove", "Tropical"],
     "continent": ["Asia", "Oceania"],
     "conservation": ["Least Concern"],
     "contentPack": "Base Game"
@@ -386,7 +386,7 @@
   {
     "name": "Spotted Eagle Ray",
     "habitat": ["Aquarium"],
-    "biome": ["Estaurine", "Open Sea", "Reef"],
+    "biome": ["Estuarine", "Open Sea", "Reef"],
     "continent": ["Indian Ocean", "Pacific Ocean"],
     "conservation": ["Endangered"],
     "contentPack": "Base Game"
@@ -413,6 +413,148 @@
     "biome": ["Tropical"],
     "continent": ["Africa"],
     "conservation": ["Critically Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Indo-Pacific Leopard Shark",
+    "habitat": ["Aquarium"],
+    "biome": ["Estuarine", "Mangrove", "Open Sea", "Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Toco Toucan",
+    "habitat": ["Habitat-Flying"],
+    "biome": ["Grassland", "Tropical", "Wetlands"],
+    "continent": ["South America"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },  {
+    "name": "Thomson's Gazelle",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  }, {
+    "name": "Sri Lankan Rose",
+    "habitat": ["Exhibit"],
+    "biome": ["Tropical"],
+    "continent": ["Asia"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Meerkat",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Desert", "Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Long-Eared Owl",
+    "habitat": ["Habitat-Flying"],
+    "biome": ["Grassland", "Taiga", "Temperate", "Wetlands"],
+    "continent": ["Africa", "Asia", "Europe", "North America"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Indo-Pacific Sergeant",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Open Sea", "Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Grey Wolf",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Desert", "Grassland", "Taiga", "Temperate", "Tropical", "Tundra"],
+    "continent": ["Asia", "Europe", "North America"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Giant Slippery Frog",
+    "habitat": ["Exhibit"],
+    "biome": ["Tropical", "Wetlands"],
+    "continent": ["Africa"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Dolphinfish",
+    "habitat": ["Aquarium"],
+    "biome": ["Open Sea"],
+    "continent": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Cape Buffalo",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland", "Wetlands"],
+    "continent": ["Africa"],
+    "conservation": ["Near Threatened"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Yellow Tang",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Reef"],
+    "continent": ["Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "White-Tailed Sea-Eagle",
+    "habitat": ["Habitat-Flying"],
+    "biome": ["Taiga", "Temperate", "Tundra", "Wetlands"],
+    "continent": ["Asia", "Europe"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Western Diamondback Rattlesnake",
+    "habitat": ["Exhibit"],
+    "biome": ["Desert", "Grassland", "Temperate"],
+    "continent": ["North America"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Spotted Hyena",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Desert", "Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Old World Swallowtail",
+    "habitat": ["Exhibit"],
+    "biome": ["Grassland", "Taiga", "Temperate", "Tundra"],
+    "continent": ["Asia", "Europe", "North America"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Great Hornbill",
+    "habitat": ["Habitat-Flying"],
+    "biome": ["Tropical"],
+    "continent": ["Asia"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Eurasian Lynx",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Taiga", "Temperate", "Tundra"],
+    "continent": ["Asia", "Europe"],
+    "conservation": ["Least Concern"],
     "contentPack": "Base Game"
   }
 ]
