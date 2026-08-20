@@ -127,7 +127,7 @@
             year: 'numeric',
             month: 'short',
             day: 'numeric',
-          }););
+          });
           dayCount.value = data.count;
           const animalNameToGuess = data.answer;
           correctAnimal = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
