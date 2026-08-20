@@ -317,19 +317,20 @@ table tbody tr:last-child td:last-child{
     border-radius: var(--radii-m);
     padding: var(--spacing-04) var(--spacing-05);
     min-width: 50%;
-    font-size: var(--type-05);
+    font-size: var(--type-04);
+    line-height: var(--spacing-06);
 }
 .input-field::placeholder {
     color: var(--text-soft-inverted);
 }
 .submit-button, .button {
-    align-self: stretch;
     padding: var(--spacing-04) var(--spacing-05);
     background-color: var(--green);
     border: 4px solid var(--dark-green);
     border-radius: var(--radii-m);
     color: var(--text-white);
     font-size: var(--type-05);
+    line-height: var(--spacing-06);
     font-family: var(--font-eagle-bold);
     transition: background-color 200ms ease-in-out;
     &:hover {
