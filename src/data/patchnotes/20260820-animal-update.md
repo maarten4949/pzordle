@@ -27,3 +27,4 @@ This update brings 9 new animals to Pzordle.
 <b>Fixes:</b>
 
 - Fixed an issue where the input field didn't hide whenever the player had no guesses remaining
+- Fixed date format
