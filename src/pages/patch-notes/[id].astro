@@ -21,7 +21,15 @@ const { Content } = await render(patchnote);
     <article>
         <header>
             <h1>{patchnote.data.title}</h1>
-            <p class="subtitle">{patchnote.data.date.toLocaleDateString()}</p>
+            <p class="subtitle">
+                {
+                    patchnote.data.date.toLocaleDateString("en-GB", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                    })
+                }
+            </p>
         </header>
         <div class="patchnote-content">
             <Content />

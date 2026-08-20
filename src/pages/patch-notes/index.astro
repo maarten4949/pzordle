@@ -31,7 +31,11 @@ const patchnotes = await getCollection("patchnotes").then((notes) => {
                         <a href={`/patch-notes/${note.id}`}>
                             <span class="title">{note.data.title}</span>
                             <span class="date">
-                                {note.data.date.toLocaleDateString()}
+                                {note.data.date.toLocaleDateString("en-GB", {
+                                    year: "numeric",
+                                    month: "short",
+                                    day: "numeric",
+                                })}
                             </span>
                         </a>
                     </li>
