@@ -2,6 +2,7 @@
 
     --BearsPaw:hsla(25, 21%, 37%, 1);
     --BearsPawDark:hsla(42, 11%, 18%, 1);
+    --BearsPawDarkSoft:hsla(42, 10%,45%, 1);
     --ZebraStripe:hsla(37, 100%, 93%, 1);
     --ZebraStripeHover:hsla(37, 30%, 70%, 1);
     --ZebraStripeDark:hsla(37, 38%, 84%, 1);
@@ -70,6 +71,7 @@
     --text-white: var(--ZebraStripe);
     --text-title: var(--ZebraStripe);
     --text-dark: var(--BearsPawDark);
+    --text-soft-inverted: var(--BearsPawDarkSoft);
     --text-inverted: var(--BearsPawDark);
     --orange: var(--ToucansBeak);
     --blue: var(--SharkFinDark);
@@ -124,6 +126,11 @@ footer {
 }
 a {
     color: var(--SharkFin);
+    border-radius: var(--radii-s);
+
+}
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid var(--SharkFin);
 }
 
 @media (width < 500px)

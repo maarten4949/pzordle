@@ -18,6 +18,15 @@ const ALL_ANIMALS = [
   "Old World Swallowtail",
   "Great Hornbill",
   "Eurasian Lynx",
+  "Boeseman's Rainbowfish",
+  "Eastern Brown Snake",
+  "Galapagos Giant Tortoise",
+  "Malayan Tapir",
+  "Mexican Redknee",
+  "Mountain Hare",
+  "Palette Surgeonfish",
+  "Western Lowland Gorilla",
+  "Shoebill",
 ];
 
 export default {

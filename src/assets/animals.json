@@ -556,5 +556,77 @@
     "continent": ["Asia", "Europe"],
     "conservation": ["Least Concern"],
     "contentPack": "Base Game"
+  },
+  {
+    "name": "Boeseman's Rainbowfish",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Lakes and Rivers"],
+    "continent": ["Asia"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Eastern Brown Snake",
+    "habitat": ["Exhibit"],
+    "biome": ["Desert", "Grassland", "Temperate"],
+    "continent": ["Oceania"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Galapagos Giant Tortoise",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Tropical"],
+    "continent": ["South America"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Malayan Tapir",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Tropical", "Wetlands"],
+    "continent": ["Asia"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Mexican Redknee",
+    "habitat": ["Exhibit", "Temperate"],
+    "biome": ["Desert", "Tropical"],
+    "continent": ["North America"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Mountain Hare",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Taiga", "Temperate", "Tundra"],
+    "continent": ["Arctic", "Asia", "Europe"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Palette Surgeonfish",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Western Lowland Gorilla",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Tropical", "Wetlands"],
+    "continent": ["Africa"],
+    "conservation": ["Critically Endangered"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Shoebill",
+    "habitat": ["Habitat-Flying"],
+    "biome": ["Wetlands"],
+    "continent": ["Africa"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
   }
 ]

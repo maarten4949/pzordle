@@ -2,7 +2,7 @@
     <header>
         <h1 v-if="isDaily">Pzordle {{ dayCount > 0 ? "#" + dayCount : "" }}</h1>
         <h1 v-else>Pzordle Practice</h1>
-        <p>{{ lastUpdated }}</p>
+        <p class="date">{{ lastUpdated }}</p>
     </header>
     <div class = "game-grid">
         <table class="answer-grid">
@@ -76,10 +76,10 @@
             <button @click="restartGame" class="button">Restart Game</button>
         </div>
     </div>
-    <div v-if="isLoading">
+    <div v-if="isLoading" class="loading">
         Loading...
     </div>
-    <form v-else class="input-form" @submit.prevent="checkAnswer" v-if="!gameSucceeded">
+    <form v-else class="input-form" @submit.prevent="checkAnswer" v-if="!gameSucceeded && !gameFailed">
         <div class="input-form-body">
         <div class="input-container">
             <input type="text" ref="inputField" v-model="guessInput" @input="input" placeholder="Enter an animal" class="input-field">
@@ -263,6 +263,9 @@ table tbody tr:last-child td:first-child{
 table tbody tr:last-child td:last-child{
     border-bottom-right-radius: var(--radii-m);
 }
+.date {
+    min-height: 1.5rem;
+}
 .list-enter-active {
   transition: all 0.3s ease-in-out;
 }
@@ -308,15 +311,19 @@ table tbody tr:last-child td:last-child{
     padding-block: var(--spacing-05);
 }
 .input-field {
+    color: var(--text-dark);
     width: 100%;
-    border: solid var(--green) 2px;
+    border: solid var(--green) 4px;
     border-radius: var(--radii-m);
     padding: var(--spacing-04) var(--spacing-05);
     min-width: 50%;
     font-size: var(--type-05);
 }
+.input-field::placeholder {
+    color: var(--text-soft-inverted);
+}
 .submit-button, .button {
-
+    align-self: stretch;
     padding: var(--spacing-04) var(--spacing-05);
     background-color: var(--green);
     border: 4px solid var(--dark-green);
@@ -324,7 +331,7 @@ table tbody tr:last-child td:last-child{
     color: var(--text-white);
     font-size: var(--type-05);
     font-family: var(--font-eagle-bold);
-    transition: all 200ms ease-in-out;
+    transition: background-color 200ms ease-in-out;
     &:hover {
         background-color: var(--dark-green);
     }
@@ -406,6 +413,11 @@ table tbody tr:last-child td:last-child{
     color: var(--red);
     text-align: center;
 }
+.loading {
+    text-align: center;
+    min-height: 3.688rem;
+    margin-block:var(--spacing-05)
+}
 @container game-grid (width < 700px)
 {
    .header-grid th {
@@ -422,6 +434,10 @@ table tbody tr:last-child td:last-child{
 }
 @media (width < 400px)
 {
+    .input-form-body{
+        flex-direction: column;
+
+    }
     .input-field, .submit-button {
         flex-grow: 1;
     }
