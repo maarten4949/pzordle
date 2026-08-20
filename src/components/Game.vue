@@ -123,7 +123,11 @@
           }
           const data = await response.json();
           const date = new Date(data.lastUpdated);
-          lastUpdated.value = date.toLocaleDateString();
+          lastUpdated.value = date.toLocaleDateString('en-GB', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          }););
           dayCount.value = data.count;
           const animalNameToGuess = data.answer;
           correctAnimal = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
