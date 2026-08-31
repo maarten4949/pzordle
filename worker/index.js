@@ -27,6 +27,14 @@ const ALL_ANIMALS = [
   "Palette Surgeonfish",
   "Western Lowland Gorilla",
   "Shoebill",
+  "Black Wildebeest",
+  "Cloudless Sulphur",
+  "Clown Triggerfish",
+  "Eurasian Beaver",
+  "Giant Tiger Land Snail",
+  "Nile Monitor",
+  "Sailfin Snapper",
+  "Sunda Pangolin",
 ];
 
 export default {

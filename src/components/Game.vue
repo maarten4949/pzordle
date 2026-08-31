@@ -41,7 +41,7 @@
                     {{guess.contentPack.value}}
                 </td>
             </tr>
-            <tr v-for="(guess, index) in (5 - guesses.length)" :key="guess" class="answer-row">
+            <tr v-for="(guess, index) in (amountOfGuesses - guesses.length)" :key="guess" class="answer-row">
                 <td class="answer-cell empty">
                     {{ index + 1 + guesses.length}}
                 </td>
@@ -100,7 +100,7 @@
     isDaily: Boolean
   })
   const correctness = { correct: "correct", incorrect: "incorrect", partiallyCorrect: "partially-correct" }
-
+  const amountOfGuesses = 6;
   let guesses = ref([]);
   let suggestions = ref([]);
   let correctAnimal = ref('');
@@ -192,7 +192,7 @@
       console.log("Game succeeded")
       gameSucceeded.value = true;
     }
-    else if (guesses.value.length === 5) {
+    else if (guesses.value.length === amountOfGuesses) {
       console.log("Game Failed")
       gameFailed.value = true;
     }
@@ -348,10 +348,11 @@ table tbody tr:last-child td:last-child{
     gap: var(--spacing-04);
     & img {
         width: var(--spacing-11);
+        border-radius: var(--radii-s);
     }
     background-color: transparent;
     border: none;
-    padding: var(--spacing-02) var(--spacing-03);
+    padding: var(--spacing-03) var(--spacing-03);
     border-radius: var(--radii-s);
     color: var(--text-white);
     &:hover, &:focus-visible {

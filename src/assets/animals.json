@@ -628,5 +628,64 @@
     "continent": ["Africa"],
     "conservation": ["Vulnerable"],
     "contentPack": "Base Game"
+  },
+  {
+    "name": "Black Wildebeest",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Cloudless Sulphur",
+    "habitat": ["Exhibit"],
+    "biome": ["Grassland", "Taiga", "Temperate"],
+    "continent": ["North America", "South America"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },  {
+    "name": "Clown Triggerfish",
+    "habitat": ["Aquarium"],
+    "biome": ["Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Eurasian Beaver",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Lakes and Rivers", "Taiga", "Temperate"],
+    "continent": ["Asia", "Europe"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },  {
+    "name": "Giant Tiger Land Snail",
+    "habitat": ["Exhibit"],
+    "biome": ["Grassland", "Tropical"],
+    "continent": ["Africa"],
+    "conservation": ["???"],
+    "contentPack": "Base Game"
+  },  {
+    "name": "Nile Monitor",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland", "Wetlands"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  }, {
+    "name": "Sailfin Snapper",
+    "habitat": ["Aquarium"],
+    "biome": ["Reef"],
+    "continent": ["Asia", "Oceania"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  }, {
+    "name": "Sunda Pangolin",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Tropical"],
+    "continent": ["Asia"],
+    "conservation": ["Critically Endangered"],
+    "contentPack": "Base Game"
   }
 ]
