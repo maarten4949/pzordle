@@ -38,6 +38,14 @@ const ALL_ANIMALS = [
   "Nile Monitor",
   "Sailfin Snapper",
   "Sunda Pangolin",
+  "Yellow Anaconda",
+  "Sable Antelope",
+  "Pacific Bluefin Tuna",
+  "Ring-tailed Lemur",
+  "Komodo Dragon",
+  "Eurasian Bittern",
+  "Desert Horned Viper",
+  "Bluespine Unicornfish",
 ];
 
 

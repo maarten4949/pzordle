@@ -687,5 +687,68 @@
     "continent": ["Asia"],
     "conservation": ["Critically Endangered"],
     "contentPack": "Base Game"
+  },
+  {
+    "name": "Yellow Anaconda",
+    "habitat": ["Exhibit"],
+    "biome": ["Tropical", "Wetlands"],
+    "continent": ["South America"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Sable Antelope",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Pacific Bluefin Tuna",
+    "habitat": ["Aquarium"],
+    "biome": ["Open Sea"],
+    "continent": ["Pacific Ocean"],
+    "conservation": ["Near Threatened"],
+    "contentPack": "Base Game"
+  },
+  {
+    "name": "Ring-tailed Lemur",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Tropical"],
+    "continent": ["Africa"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Komodo Dragon",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Mangrove", "Tropical", "Wetlands"],
+    "continent": ["Asia"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  }
+  ,{
+    "name": "Eurasian Bittern",
+    "habitat": ["Habitat-Flying"],
+    "biome": ["Temperate", "Wetlands"],
+    "continent": ["Africa", "Asia", "Europe"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  }
+  ,{
+    "name": "Desert Horned Viper",
+    "habitat": ["Exhibit"],
+    "biome": ["Desert"],
+    "continent": ["Africa", "Asia"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  }
+  ,{
+    "name": "Bluespine Unicornfish",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
   }
 ]
