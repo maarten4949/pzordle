@@ -150,8 +150,7 @@ const formattedHistory = computed(() => {
           dayCount.value = data.count;
           const animalNameToGuess = data.answer;
           correctAnimal.value = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
-          history.value = data.history;
-          console.log("history length", history.value.length)
+          history.value = data.history.reverse();
           selectedDateInput.value = history.value.length - 1
         }
         else {
