@@ -149,12 +149,12 @@
           });
           dayCount.value = data.count;
           const animalNameToGuess = data.answer;
-          correctAnimal.value = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
+          correctAnimal = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
           history.value = data.history.reverse();
           selectedDateInput.value = 0
         }
         else {
-          correctAnimal.value = animals[Math.floor(Math.random() * animals.length)];
+          correctAnimal = animals[Math.floor(Math.random() * animals.length)];
       }
 
       } catch (err) {
@@ -176,9 +176,9 @@
       month: 'short',
       day: 'numeric',
     });
-    correctAnimal.value = animals.find(animal => animal.name.toLowerCase() === selectedHistoryItem.answer.toLowerCase());
+    correctAnimal = animals.find(animal => animal.name.toLowerCase() === selectedHistoryItem.answer.toLowerCase());
     restartGame(false);
-    if (!correctAnimal.value)
+    if (!correctAnimal)
     {
         console.error('Failed to load animal of specific date', );
     }
@@ -200,7 +200,7 @@
     gameSucceeded.value = false;
     gameFailed.value = false;
     if (isRandom) {
-        correctAnimal.value = animals[Math.floor(Math.random() * animals.length)];
+        correctAnimal = animals[Math.floor(Math.random() * animals.length)];
     }
   }
   function selectSuggestion(suggestion) {
@@ -221,14 +221,18 @@
     }
     else {
       guesses.value.push({
-        name: { value: guessedAnimal.name, correctness: getCorrectNess(guessedAnimal.name, correctAnimal.value.name) },
-        habitat: { value: guessedAnimal.habitat, correctness: getCorrectNess(guessedAnimal.habitat, correctAnimal.value.habitat) },
-        biome: { value: guessedAnimal.biome, correctness: getCorrectNess(guessedAnimal.biome, correctAnimal.value.biome) },
-        continent: { value: guessedAnimal.continent, correctness: getCorrectNess(guessedAnimal.continent, correctAnimal.value.continent) },
-        conservation: { value: guessedAnimal.conservation, correctness: getCorrectNess(guessedAnimal.conservation, correctAnimal.value.conservation) },
-        contentPack: { value: guessedAnimal.contentPack, correctness: getCorrectNess(guessedAnimal.contentPack, correctAnimal.value.contentPack) },
+        name: { value: guessedAnimal.name, correctness: getCorrectNess(guessedAnimal.name, correctAnimal.name) },
+        habitat: { value: guessedAnimal.habitat, correctness: getCorrectNess(guessedAnimal.habitat, correctAnimal.habitat) },
+        biome: { value: guessedAnimal.biome, correctness: getCorrectNess(guessedAnimal.biome, correctAnimal.biome) },
+        continent: { value: guessedAnimal.continent, correctness: getCorrectNess(guessedAnimal.continent, correctAnimal.continent) },
+        conservation: { value: guessedAnimal.conservation, correctness: getCorrectNess(guessedAnimal.conservation, correctAnimal.conservation) },
+        contentPack: { value: guessedAnimal.contentPack, correctness: getCorrectNess(guessedAnimal.contentPack, correctAnimal.contentPack) },
         })
     }
+    console.log("checking if guessedanimal is correct animal")
+    console.log("guessedanimal", guessedAnimal)
+    console.log("correctanimal", correctAnimal)
+    console.log("equal?", guessedAnimal === correctAnimal)
     if (guessedAnimal === correctAnimal) {
       console.log("Game succeeded")
       gameSucceeded.value = true;
