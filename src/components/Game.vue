@@ -120,7 +120,7 @@
   let gameSucceeded = ref(false);
   let gameFailed = ref(false);
   const history = ref([]);
-const formattedHistory = computed(() => {
+  const formattedHistory = computed(() => {
   console.log("history length (fromate)", history.value.length)
   return history.value.map(item => ({
       ...item,
@@ -151,7 +151,7 @@ const formattedHistory = computed(() => {
           const animalNameToGuess = data.answer;
           correctAnimal.value = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
           history.value = data.history.reverse();
-          selectedDateInput.value = history.value.length - 1
+          selectedDateInput.value = 0
         }
         else {
           correctAnimal.value = animals[Math.floor(Math.random() * animals.length)];
