@@ -69,7 +69,7 @@
         <h2>You guessed correctly!</h2>
         <span v-if="props.isDaily">Check back tomorrow to guess a new animal.</span>
         <div v-if="!props.isDaily">
-            <button @click="restartGame" class="button">Go Again</button>
+            <button @click="restartGame(true)" class="button">Go Again</button>
         </div>
     </div>
     <div v-if="gameFailed" class="game-failed">
@@ -77,7 +77,7 @@
         <p>The correct animal was: {{correctAnimal.name}}</p>
         <p v-if="props.isDaily">Check back tomorrow to guess a new animal.</p>
         <div v-if="!props.isDaily">
-            <button @click="restartGame" class="button">Restart Game</button>
+            <button @click="restartGame(true)" class="button">Restart Game</button>
         </div>
     </div>
     <div v-if="isLoading" class="loading">
@@ -178,6 +178,7 @@ const formattedHistory = computed(() => {
       day: 'numeric',
     });
     correctAnimal.value = animals.find(animal => animal.name.toLowerCase() === selectedHistoryItem.answer.toLowerCase());
+    restartGame(false);
     if (!correctAnimal.value)
     {
         console.error('Failed to load animal of specific date', );
@@ -193,14 +194,15 @@ const formattedHistory = computed(() => {
       }
     }
   }
-  function restartGame() {
+  function restartGame(isRandom) {
     guesses.value = [];
     errorMessage.value = "";
     guessInput.value = "";
     gameSucceeded.value = false;
     gameFailed.value = false;
-    correctAnimal = animals[Math.floor(Math.random() * animals.length)];
-
+    if (isRandom) {
+        correctAnimal.value = animals[Math.floor(Math.random() * animals.length)];
+    }
   }
   function selectSuggestion(suggestion) {
     guessInput.value = suggestion;
