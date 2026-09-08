@@ -172,7 +172,7 @@
   function selectDay() {
     const selectedDayIndex = selectedDateInput.value;
     const selectedHistoryItem = history.value[selectedDayIndex];
-    const selectedCount = dayCount.value - selectedDayIndex;
+    selectedCount.value = dayCount.value - selectedDayIndex;
     if (!selectedHistoryItem) return;
     pzordleDate.value = new Date(selectedHistoryItem.date).toLocaleDateString('en-GB', {
       year: 'numeric',
