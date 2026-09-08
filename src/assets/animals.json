@@ -750,5 +750,47 @@
     "continent": ["Indian Ocean", "Pacific Ocean"],
     "conservation": ["Least Concern"],
     "contentPack": "Base Game"
+  },{
+    "name": "Common Rudd",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Lakes and Rivers"],
+    "continent": ["Europe"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Lehmann's Poison Frog",
+    "habitat": ["Exhibit"],
+    "biome": ["Tropical"],
+    "continent": ["South America"],
+    "conservation": ["Critically Endangered"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Menelaus Blue Morpho",
+    "habitat": ["Exhibit"],
+    "biome": ["Grassland", "Tropical"],
+    "continent": ["South America"],
+    "conservation": ["???"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Nyala",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Prezwalski's Horse",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Desert", "Grassland"],
+    "continent": ["Asia"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },{
+    "name": "White-backed Vulture",
+    "habitat": ["Habitat-Flying"],
+    "biome": ["Desert", "Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Critically Endangered"],
+    "contentPack": "Base Game"
   }
 ]

@@ -46,6 +46,7 @@ const ALL_ANIMALS = [
   "Eurasian Bittern",
   "Desert Horned Viper",
   "Bluespine Unicornfish",
+  "Common Rudd","Lehmann's Poison Frog", "Menelaus Blue Morpho","Nyala", "Prezwalski's Horse", "White-backed Vulture",
 ];
 
 
