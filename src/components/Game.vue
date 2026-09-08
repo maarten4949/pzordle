@@ -1,8 +1,12 @@
 <template>
+<div>
     <header>
         <h1 v-if="isDaily">Pzordle {{ dayCount > 0 ? "#" + dayCount : "" }}</h1>
         <h1 v-else>Pzordle Practice</h1>
-        <p class="date">{{ lastUpdated }}</p>
+        <!-- <p class="date" >{{ pzordleDate }}</p> -->
+        <select v-if="history.length > 0 && isDaily" v-model="selectedDateInput">
+            <option v-for="(item, index) in formattedHistory" :key="item.date" :value="index" >{{ item.formattedDate }}</option>
+        </select>
     </header>
     <div class = "game-grid">
         <table class="answer-grid">
@@ -91,9 +95,11 @@
         </div>
         <div class="error-message">{{errorMessage}}</div>
     </form>
+</div>
+
 </template>
 <script setup>
-  import { ref, onMounted } from 'vue'
+  import { ref, onMounted, computed, watch } from 'vue'
   import animals from "../assets/animals.json"
   import schedule from "../assets/schedule.json"
   const props = defineProps({
@@ -105,13 +111,26 @@
   let suggestions = ref([]);
   let correctAnimal = ref('');
   const guessInput = defineModel("guessInput");
+  const selectedDateInput = defineModel("selectedDateInput")
   let inputField = ref("")
   const isLoading = ref(true);
-  const lastUpdated = ref("");
+  const pzordleDate = ref("");
   const dayCount = ref(0);
   let errorMessage = ref("");
   let gameSucceeded = ref(false);
   let gameFailed = ref(false);
+  const history = ref([]);
+const formattedHistory = computed(() => {
+  console.log("history length (fromate)", history.value.length)
+  return history.value.map(item => ({
+      ...item,
+      formattedDate: new Date(item.date).toLocaleDateString('en-GB', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      }),
+    }));
+  });
 
   onMounted(async () => {
     try {
@@ -123,26 +142,47 @@
           }
           const data = await response.json();
           const date = new Date(data.lastUpdated);
-          lastUpdated.value = date.toLocaleDateString('en-GB', {
+          pzordleDate.value = date.toLocaleDateString('en-GB', {
             year: 'numeric',
             month: 'short',
             day: 'numeric',
           });
           dayCount.value = data.count;
           const animalNameToGuess = data.answer;
-          correctAnimal = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
+          correctAnimal.value = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
+          history.value = data.history;
+          console.log("history length", history.value.length)
+          selectedDateInput.value = history.value.length - 1
         }
         else {
-          correctAnimal = animals[Math.floor(Math.random() * animals.length)];
-        }
+          correctAnimal.value = animals[Math.floor(Math.random() * animals.length)];
+      }
+
       } catch (err) {
         console.error('Failed to load today\'s character:', err);
         errorMessage.value = 'Could not load today\'s puzzle. Please try again!';
       } finally {
         isLoading.value = false;
       }
+  });
+  watch(selectedDateInput, (newDate) => {
+    selectDay(newDate)
+  })
+  function selectDay() {
+    const selectedDayIndex = selectedDateInput.value;
+    const selectedHistoryItem = history.value[selectedDayIndex];
+    if (!selectedHistoryItem) return;
+    pzordleDate.value = new Date(selectedHistoryItem.date).toLocaleDateString('en-GB', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
     });
-
+    correctAnimal.value = animals.find(animal => animal.name.toLowerCase() === selectedHistoryItem.answer.toLowerCase());
+    if (!correctAnimal.value)
+    {
+        console.error('Failed to load animal of specific date', );
+    }
+  }
   function input(e){
     errorMessage.value = "";
     suggestions.value = [];
@@ -180,12 +220,12 @@
     }
     else {
       guesses.value.push({
-        name: { value: guessedAnimal.name, correctness: getCorrectNess(guessedAnimal.name, correctAnimal.name) },
-        habitat: { value: guessedAnimal.habitat, correctness: getCorrectNess(guessedAnimal.habitat, correctAnimal.habitat) },
-        biome: { value: guessedAnimal.biome, correctness: getCorrectNess(guessedAnimal.biome, correctAnimal.biome) },
-        continent: { value: guessedAnimal.continent, correctness: getCorrectNess(guessedAnimal.continent, correctAnimal.continent) },
-        conservation: { value: guessedAnimal.conservation, correctness: getCorrectNess(guessedAnimal.conservation, correctAnimal.conservation) },
-        contentPack: { value: guessedAnimal.contentPack, correctness: getCorrectNess(guessedAnimal.contentPack, correctAnimal.contentPack) },
+        name: { value: guessedAnimal.name, correctness: getCorrectNess(guessedAnimal.name, correctAnimal.value.name) },
+        habitat: { value: guessedAnimal.habitat, correctness: getCorrectNess(guessedAnimal.habitat, correctAnimal.value.habitat) },
+        biome: { value: guessedAnimal.biome, correctness: getCorrectNess(guessedAnimal.biome, correctAnimal.value.biome) },
+        continent: { value: guessedAnimal.continent, correctness: getCorrectNess(guessedAnimal.continent, correctAnimal.value.continent) },
+        conservation: { value: guessedAnimal.conservation, correctness: getCorrectNess(guessedAnimal.conservation, correctAnimal.value.conservation) },
+        contentPack: { value: guessedAnimal.contentPack, correctness: getCorrectNess(guessedAnimal.contentPack, correctAnimal.value.contentPack) },
         })
     }
     if (guessedAnimal === correctAnimal) {
@@ -200,7 +240,7 @@
       inputField.value?.focus();
   }
   function getCorrectNess(guess, correctValue) {
-  console.log(guess)
+    console.log(guess)
     console.log(correctValue)
     if (Array.isArray(guess) && compareArrays(guess, correctValue))
     {
@@ -323,6 +363,7 @@ table tbody tr:last-child td:last-child{
     min-width: 50%;
     font-size: var(--type-04);
     line-height: var(--spacing-06);
+    background-color: var(--bg-3);
 }
 .input-field::placeholder {
     color: var(--text-soft-inverted);
@@ -423,6 +464,12 @@ table tbody tr:last-child td:last-child{
     text-align: center;
     min-height: 3.688rem;
     margin-block:var(--spacing-05)
+}
+select {
+    padding: var(--spacing-03) var(--spacing-04);
+    border-radius: var(--radii-m);
+    background-color: var(--bg-3);
+    border: 4px solid var(--dark-green);
 }
 @container game-grid (width < 700px)
 {

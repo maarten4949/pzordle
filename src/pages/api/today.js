@@ -65,6 +65,7 @@ export async function GET(context) {
   }
 
   let todayAnswer = await KV.get("TODAY");
+  let history = await KV.get("ALL_HISTORY", { type: 'json' });
   let count = await KV.get("COUNT");
   let lastUpdated = await KV.get("LAST_UPDATED");
 
@@ -72,7 +73,7 @@ export async function GET(context) {
     todayAnswer = await pickNextAnswer(KV);
   }
 
-  return new Response(JSON.stringify({ answer: todayAnswer, count: count, lastUpdated: lastUpdated }), {
+  return new Response(JSON.stringify({ answer: todayAnswer, history: history, count: count, lastUpdated: lastUpdated }), {
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
