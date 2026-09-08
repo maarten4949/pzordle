@@ -1,7 +1,7 @@
 <template>
 <div>
     <header>
-        <h1 v-if="isDaily">Pzordle {{ dayCount > 0 ? "#" + dayCount - selectedDateInput.value : "" }}</h1>
+        <h1 v-if="isDaily">Pzordle {{ selectedCount > 0 ? "#" + selectedCount : "" }}</h1>
         <h1 v-else>Pzordle Practice</h1>
         <!-- <p class="date" >{{ pzordleDate }}</p> -->
         <select v-if="history.length > 0 && isDaily" v-model="selectedDateInput">
@@ -116,6 +116,7 @@
   const isLoading = ref(true);
   const pzordleDate = ref("");
   const dayCount = ref(0);
+  const selectedCount = ref(0);
   let errorMessage = ref("");
   let gameSucceeded = ref(false);
   let gameFailed = ref(false);
@@ -152,6 +153,7 @@
           correctAnimal = animals.find(animal => animal.name.toLowerCase() === animalNameToGuess.toLowerCase());
           history.value = data.history.reverse();
           selectedDateInput.value = 0
+          selectedCount.value = dayCount.value;
         }
         else {
           correctAnimal = animals[Math.floor(Math.random() * animals.length)];
@@ -170,6 +172,7 @@
   function selectDay() {
     const selectedDayIndex = selectedDateInput.value;
     const selectedHistoryItem = history.value[selectedDayIndex];
+    const selectedCount = dayCount.value - selectedDayIndex;
     if (!selectedHistoryItem) return;
     pzordleDate.value = new Date(selectedHistoryItem.date).toLocaleDateString('en-GB', {
       year: 'numeric',
