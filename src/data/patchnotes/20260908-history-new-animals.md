@@ -1,5 +1,5 @@
 ---
-title: New History options
+title: New History option
 date: 2026-09-08
 ---
 This update adds the ability to play Pzordles of the past!

@@ -1,7 +1,7 @@
 <template>
 <div>
     <header>
-        <h1 v-if="isDaily">Pzordle {{ dayCount > 0 ? "#" + dayCount : "" }}</h1>
+        <h1 v-if="isDaily">Pzordle {{ dayCount > 0 ? "#" + dayCount - selectedDateInput.value : "" }}</h1>
         <h1 v-else>Pzordle Practice</h1>
         <!-- <p class="date" >{{ pzordleDate }}</p> -->
         <select v-if="history.length > 0 && isDaily" v-model="selectedDateInput">
