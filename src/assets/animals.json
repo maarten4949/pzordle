@@ -792,5 +792,68 @@
     "continent": ["Africa"],
     "conservation": ["Critically Endangered"],
     "contentPack": "Base Game"
+  },{
+    "name": "Sumatran Orangutan",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Tropical"],
+    "continent": ["Asia"],
+    "conservation": ["Critically Endangered"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Sun Bear",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Tropical", "Wetlands"],
+    "continent": ["Asia"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Snow Leopard",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Taiga", "Tundra"],
+    "continent": ["Asia"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Indian Ocean Oriental Sweetlips",
+    "habitat": ["Aquarium"],
+    "biome": ["Estuarine", "Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Goliath Beetle",
+    "habitat": ["Exhibit"],
+    "biome": ["Grassland", "Tropical"],
+    "continent": ["Africa"],
+    "conservation": ["???"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Giant Panda",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Temperate"],
+    "continent": ["Asia"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Giant Grouper",
+    "habitat": ["Aquarium"],
+    "biome": ["Estuarine", "Mangrove", "Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Data Deficient"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Giant Forest Scorpion",
+    "habitat": ["Exhibit"],
+    "biome": ["Tropical"],
+    "continent": ["Asia"],
+    "conservation": ["???"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Common Warthog",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
   }
 ]
