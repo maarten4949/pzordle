@@ -855,5 +855,55 @@
     "continent": ["Africa"],
     "conservation": ["Least Concern"],
     "contentPack": "Base Game"
+  },{
+    "name": "Sacred Scarab Beetle",
+    "habitat": ["Exhibit"],
+    "biome": ["Desert"],
+    "continent": ["Africa", "Asia", "Europe"],
+    "conservation": ["???"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Giant Gourami",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Lakes and Rivers"],
+    "continent": ["Asia"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Clown Anemonefish",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Asian Elephant",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland", "Tropical", "Wetlands"],
+    "continent": ["Asia"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Amazonian Giant Centipede",
+    "habitat": ["Exhibit"],
+    "biome": ["Tropical"],
+    "continent": ["South America"],
+    "conservation": ["???"],
+    "contentPack": "Base Game"
+  },{
+    "name": "African Wild Dog",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Endangered"],
+    "contentPack": "Base Game"
+  },{
+    "name": "West Indian Manatee",
+    "habitat": ["Aquarium"],
+    "biome": ["Estuarine", "Lakes and Rivers", "Mangrove", "Open Sea", "Wetlands"],
+    "continent": ["North America", "South America"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
   }
+
 ]

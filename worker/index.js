@@ -44,7 +44,8 @@ const ALL_ANIMALS = [
   "Desert Horned Viper",
   "Bluespine Unicornfish",
   "Common Rudd", "Lehmann's Poison Frog", "Menelaus Blue Morpho", "Nyala", "Prezwalski's Horse", "White-backed Vulture",
-  "Sumatran Orangutan", "Sun Bear", "Snow Leopard", "Indian Ocean Oriental Sweetlips", "Goliath Beetle", "Giant Panda", "Giant Grouper", "Giant Forest Scorpion", "Common Warthog"
+  "Sumatran Orangutan", "Sun Bear", "Snow Leopard", "Indian Ocean Oriental Sweetlips", "Goliath Beetle", "Giant Panda", "Giant Grouper", "Giant Forest Scorpion", "Common Warthog",
+  "Sacred Scarab Beetle", "Giant Gourami", "Clown Anemonefish", "Asian Elephant","Amazonian Giant Centipede","African Wild Dog","West Indian Manatee",
 
 ];
 
