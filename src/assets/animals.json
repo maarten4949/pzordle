@@ -904,6 +904,55 @@
     "continent": ["North America", "South America"],
     "conservation": ["Vulnerable"],
     "contentPack": "Base Game"
+  },{
+    "name": "Wild Boar",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland", "Temperate", "Tropical", "Wetlands"],
+    "continent": ["Africa", "Asia", "Europe"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Threespot Damselfish",
+    "habitat": ["Aquarium", "Exhibit"],
+    "biome": ["Mangrove", "Reef"],
+    "continent": ["Indian Ocean", "Pacific Ocean"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Moon Jelly",
+    "habitat": ["Exhibit"],
+    "biome": ["Estuarine", "Open Sea"],
+    "continent": ["Arctic Ocean", "Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Southern Ocean"],
+    "conservation": ["???"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Monarch",
+    "habitat": ["Exhibit"],
+    "biome": ["Grassland", "Temperate", "Tropical"],
+    "continent": ["Asia", "North America", "Oceania", "South America"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Common Ostrich",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Grassland"],
+    "continent": ["Africa"],
+    "conservation": ["Least Concern"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Bactrian Camel",
+    "habitat": ["Habitat-Terrestrial"],
+    "biome": ["Desert", "Grassland", "Temperate"],
+    "continent": ["Asia"],
+    "conservation": ["Domesticated"],
+    "contentPack": "Base Game"
+  },{
+    "name": "Long-tailed parakeet",
+    "habitat": ["Habitat-Flying"],
+    "biome": ["Tropical"],
+    "continent": ["Asia"],
+    "conservation": ["Vulnerable"],
+    "contentPack": "Base Game"
   }
 
 ]
